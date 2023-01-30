@@ -10,11 +10,15 @@ Create a hello world service in a git repository
 together with a CI/CD pipeline that performs unit tests, creates a container, pushes the image to a
 repository (Docker Hub) and deploys to an online server (I used AWS EC2)
 
-### Run it, easy
-1 - Clone the repo
-2 - Add correspondent secrets:
->SSH_USER
->HOST
->EC2_PRIVATE_KEY
->DOCKER_USERNAME
->DOCKER_PASSWORD
+### Run it with GithubAct. easy
+- Clone the repo
+- Modify correspondent secrets:
+.SSH_USER
+.HOST
+.EC2_PRIVATE_KEY
+.DOCKER_USERNAME
+.DOCKER_PASSWORD
+- when you push it to your "origin master" github actions will run the workflow automatically
+
+# Run locally just to see the helloworld
+- Run "docker-compose up"
