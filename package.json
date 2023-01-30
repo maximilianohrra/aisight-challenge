@@ -1,0 +1,30 @@
+{
+  "name": "AISIGHT_JS",
+  "version": "1.0.0",
+  "description": "A simple 'Hello World' web service using Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha helloworld.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "mjs"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.17.1",
+    "mocha": "^10.2.0",
+    "morgan": "^1.10.0",
+    "supertest": "^6.3.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maximilianohrra/helloworld-js-challenge"
+  }
+}

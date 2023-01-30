@@ -1,0 +1,3 @@
+# devops-challenge-helloworld
+# AISIGHT - Maximiliano Herrera
+This repo includes a single file named "index.js" which exports a function that returns the string "Hello World". The project also includes a second file named "server.js", which uses the "http" module in Node.js to create a server. The server listens on port 5000 and returns the result of the "helloworld" function as the response to HTTP requests.

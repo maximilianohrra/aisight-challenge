@@ -1,0 +1,28 @@
+# ansible-playbook nginx-playbook.yml -e "servicio=legales-api"  -e "puerto=20451"
+---
+- hosts: local
+  tasks:
+    #- name: ensure nginx is at the latest version
+    #  apt: name=nginx state=latest
+    #  become: yes
+    #- name: start nginx
+    #  service:
+    #      name: nginx
+    #      state: started
+    #  become: yes
+    - name: copy the nginx config 
+      copy:
+        src: ./helloaisight.com.conf
+        dest: /etc/nginx/sites-available/helloaisight.com.conf
+      become: yes
+    - name: create symlink
+      file:
+        src: /etc/nginx/sites-available/helloaisight.com.conf
+        dest: /etc/nginx/sites-enabled/helloaisight.com.conf
+        state: link
+      become: yes
+    - name: reload nginx
+      service:
+        name: nginx
+        state: reloaded 
+      become: yes

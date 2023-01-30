@@ -1,0 +1,7 @@
+version: '3'
+services:
+  web:
+    image: maxihra/helloworld-aisight:latest
+    ports:
+      - "5000:5000"
+    container_name: helloworld-aisight
